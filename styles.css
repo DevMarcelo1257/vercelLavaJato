@@ -1,0 +1,195 @@
+/* Estilo para o link de agendamento que se parece com um botão */
+a.btn {
+    padding: 15px 30px;
+    background-color: #ffa500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+a.btn:hover {
+    background-color: #e69500;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto principal */
+    padding: 20px;
+}
+
+/* Seções */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.section.hidden {
+    opacity: 0;
+}
+
+.section h1, .section h2 {
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.section:hover h1, .section:hover h2 {
+    color: #ffa500;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Container de serviços */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.service img {
+    max-width: 50%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffa500;
+}
+
+.service p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Estilos para a tabela de preços */
+.price-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-table th, .price-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.price-table thead {
+    background-color: #222;
+}
+
+.price-table th {
+    font-size: 1.2rem;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background-color: #444;
+}
+
+.price-table tbody tr:hover {
+    background-color: #555;
+}
+
+.price-table tbody td {
+    font-size: 1rem;
+    border-bottom: 1px solid #666;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service {
+        max-width: 90%;
+    }
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service {
+        max-width: 90%;
+    }
+}
+
+
+/* Media queries para responsividade */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .services-container {
+        justify-content: center;
+    }
+
+    .service {
+        flex: 1 1 calc(50% - 40px); /* Duas colunas com espaçamento */
+        max-width: calc(50% - 40px);
+    }
+
+    .service img {
+        width: 80%; /* Imagem ocupando largura reduzida */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    .service {
+        flex: 1 1 calc(100% - 40px); /* Uma coluna com espaçamento */
+        max-width: calc(100% - 40px);
+    }
+}
