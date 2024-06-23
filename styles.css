@@ -15,7 +15,12 @@ a.btn:hover {
     background-color: #e69500;
 }
 
-/* Estilo geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -28,22 +33,23 @@ body {
 .section {
     padding: 80px 0;
     text-align: center;
-    opacity: 1;
-    transition: opacity 0.5s ease;
+    opacity: 1; /* Inicialmente visível */
+    transition: opacity 0.5s ease; /* Transição de opacidade */
 }
 
 .section.hidden {
-    opacity: 0;
+    opacity: 0; /* Opacidade 0 para esconder */
 }
 
 .section h1, .section h2 {
     margin-bottom: 20px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transição de cor do texto */
 }
 
 .section:hover h1, .section:hover h2 {
-    color: #ffa500;
+    color: #ffa500; /* Cor laranja no hover */
 }
+
 
 .content {
     max-width: 800px;
@@ -62,15 +68,15 @@ body {
     max-width: 300px;
     margin: 20px;
     padding: 20px;
-    background-color: #333;
+    background-color: #333; /* Fundo escuro para destacar */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px); /* Movimento para cima no hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais intensa no hover */
 }
 
 .service img {
@@ -82,14 +88,13 @@ body {
 .service h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #ffa500;
+    color: #ffa500; /* Cor laranja para título */
 }
 
 .service p {
     font-size: 1.1rem;
-    color: #ccc;
+    color: #ccc; /* Cor do texto */
 }
-
 /* Estilos para a tabela de preços */
 .price-container {
     max-width: 800px;
@@ -102,8 +107,8 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -111,11 +116,11 @@ body {
 
 .price-table th, .price-table td {
     padding: 12px 15px;
-    text-align: left;
+    text-align: center; /* Alinhamento centralizado */
 }
 
 .price-table thead {
-    background-color: #222;
+    background-color: #222; /* Fundo do cabeçalho mais escuro */
 }
 
 .price-table th {
@@ -123,16 +128,26 @@ body {
 }
 
 .price-table tbody tr:nth-child(even) {
-    background-color: #444;
+    background-color: #444; /* Fundo das linhas pares mais escuro */
 }
 
 .price-table tbody tr:hover {
-    background-color: #555;
+    background-color: #555; /* Fundo mais escuro ao passar o mouse */
 }
 
 .price-table tbody td {
     font-size: 1rem;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #666; /* Linhas divisórias mais escuras */
+}
+
+@media (max-width: 768px) {
+    .price-container {
+        padding: 10px;
+    }
+
+    .price-table {
+        font-size: 0.9rem;
+    }
 }
 
 /* Estilos responsivos */
