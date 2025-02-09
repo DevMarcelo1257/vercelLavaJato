@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $horario = $_POST['horario'];
 
     // Configurações para o envio de email
-    $to = "olaranjao2010@gmail.com"; // Endereço de email para receber o agendamento
+    $to = "YOUR EMAIL HERE"; // Endereço de email para receber o agendamento
     $subject = "Novo Agendamento de Serviço";
     $message = "
         Nome: $nome $sobrenome \n
